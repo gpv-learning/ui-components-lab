@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+        <meta charset="UTF-8"/>
+        <meta name="viewport" content="width=device-width"/>
+        <title>Add a writer component</title>
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.9.0/fonts/remixicon.css" rel="stylesheet"/>
+        <link href="style.css" rel="stylesheet"/>
+   </head>
+   <body>
+        <article id="card">
+            <header>
+                <h1>Add a writer</h1>
+                <button class="tertiary-button"><i class="ri-close-line"></i></button>
+            </header>
+            <main>
+                <form class="writer-data" action="" method="POST" id="writer-form">
+                    <section class="image-section"> 
+                        <div class="image-frame" id="writer-image">
+                            <i class="ri-add-circle-fill"></i>
+                            <i class="ri-account-circle-fill"></i>
+                        </div>
+                        <div class="image-infos">
+                            <h2 class="title">Upload Image</h2>
+                            <p class="file-size-label">Max file size: 1MB</p>
+                        </div>
+                        <label class="secondary-button" for="avatar">Add Image</label>
+                        <input type="file" name="writer-avatar" id="avatar" accept=".jpg, .jpeg, .png" multiple>
+                    </section>
+                    <section class="work-section">
+                        <div class="work-info">
+                            <label class="title" for="name">Author name<i class="asterisk">*</i></label>
+                            <input type="text" id="name" name="writer-name" placeholder="Enter author name" required>
+                        </div>
+                        <div class="work-info">
+                            <label class="title" for="title">Title <i class="ri-information-2-fill info-icon"></i></label>
+                            <input type="text" id="title" name="work-title" placeholder="Enter title" required>
+                        </div>
+                        <div class="buttons">
+                            <input class="secondary-button" type="reset" value="Cancel">
+                            <input class="primary-button" type="submit" value="Save Changes">
+                        </div>
+                    </section>
+                </form>
+            </main>
+        </article>
+        <script src="./script.js"></script> 
+   </body>
+</html>

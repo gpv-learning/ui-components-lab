@@ -1,0 +1,225 @@
+:root {
+    --main-background-color: #fff;
+    --main-text-color: #333;
+    --secondary-text-color: #555;
+    --weak-text-color: #999;
+    --border-color: #ccc;
+    --default-primary-button-color: #333;
+    --hover-primary-button-color: #3f3f3f;
+    --active-primary-button-color: #727272;
+    --default-secondary-button-color: #fff;
+    --hover-secondary-button-color: #f6f6f3;
+    --active-secondary-button-color: #e9e9e5;
+    --title-size: 18px;
+    --label-size: 14px;
+    --input-size: 15px;
+    --secondary-text-size: 12px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Inter', 'Roboto', 'Segoe UI', sans-serif;
+}
+
+/* ICON STYLE */
+
+.image-frame {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #f5f5f5;
+    border: 2px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.ri-add-circle-fill {
+    position: absolute;
+    bottom: 65%;
+    left: 65%;
+    font-size: 24px;
+    color: #888;
+}
+
+.ri-account-circle-fill {
+    font-size: 72px;
+    color: #e5e5e5;
+}
+
+.info-icon {
+    color: #e5e5e5;
+    font-weight: normal;
+}
+
+/* LAYOUT STYLE */
+
+#card {
+    width: 520px;
+    height: auto;
+    padding: 12px 0;
+    border-radius: 12px;
+    background-color: var(--main-background-color);
+    box-shadow: 0 4px 4px rgba(165, 165, 165, 0.88);
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    padding: 0 12px 12px 12px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    margin: 0;
+    color: var(--main-text-color);
+}
+
+main {
+    width: 100%;
+    height: auto;
+    padding: 0 16px;
+}
+
+.writer-data {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: space-between;
+    padding-top: 12px;
+}
+
+.image-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    flex-grow: 1;
+    padding: 12px 0;
+    border-right: 1px dashed var(--border-color);
+}
+
+.image-infos {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.work-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    flex-grow: 2;
+    padding: 12px 0 0 16px;
+}
+
+.work-info {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+
+.buttons {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    align-items: end;
+    gap: 12px;
+}
+
+/* BUTTON STYLE */
+
+.primary-button, .secondary-button, .tertiary-button { border-radius: 6px; }
+
+.primary-button, .secondary-button {
+    width: fit-content;
+    height: auto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 12px;
+}
+
+.primary-button {
+    background-color: var(--default-primary-button-color);
+    color: #fff;
+}
+
+.primary-button:hover { background-color: var(--hover-primary-button-color); }
+
+.primary-button:active { background-color: var(--active-primary-button-color); }
+
+.secondary-button, .tertiary-button {
+    background-color: var(--default-secondary-button-color);
+    color: var(--main-text-color);
+}
+
+.secondary-button { border: 1px solid var(--border-color); }
+
+.primary-button, .tertiary-button { border: none; }
+
+.secondary-button:hover, .tertiary-button:hover {
+    background-color: var(--hover-secondary-button-color);
+}
+
+.secondary-button:active, .tertiary-button:active {
+    background-color: var(--active-secondary-button-color);
+}
+
+/* INPUT STYLE */
+
+input[type=file] {
+    display: none;
+}
+
+input[type=text] {
+    border: 1px solid var(--border-color);
+    width: 100%;
+    height: auto;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 12px;
+    border-radius: 6px;
+    color: var(--main-text-color);
+}
+
+/* LABEL STYLE */
+
+.title {
+    font-weight: 600;
+    font-size: var(--label-size);
+}
+
+.asterisk {
+    color: #0069d9;
+}
+
+.file-size-label {
+    font-size: var(--secondary-text-size);
+}
+
+h1, .ri-close-line {
+    font-size: var(--title-size);
+    font-weight: normal;
+    margin: 0;
+}
